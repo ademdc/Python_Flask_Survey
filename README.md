@@ -1,3 +1,5 @@
-Code that goes along with a video I made here: https://www.youtube.com/watch?v=vVx1737auSE
+This is a customized survey done in Python Flask with a NoSQL document based MongoDB database.
 
-This is for a user login system using Flask and MongoDB.
+This is for a user login system using Flask and MongoDB and later doing a survey which is recorded in a special collection.
+
+In this small application, basics of Flask are done like HTTTP requests, rendering templates, sessions, flash messages, working with databases etc.
