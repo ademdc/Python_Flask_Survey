@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <br><br>
+          {% if error %}
+          <div class="alert alert-danger">
+            {{ error }}
+          </div>
+          {% endif%}
+          <br>
+            <form method=POST action="{{ url_for('survey') }}">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Year of study</label>
+                    <input type="radio" name="year" value="1"> First
+                    <input type="radio" name="year" value="2"> Second
+                    <input type="radio" name="year" value="3"> Third
+                    <input type="radio" name="year" value="4"> Fourth
+                </div>
+                <div class="form-group">
+                    <label for="comfortable">Most comfortable with</label>
+                    <input type="input" class="form-control" name="comfortable" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Order from 1 to 5</label><br>
+                    Java:<input type="input" class="form-control" name="java" placeholder="">
+                    Python: <input type="input" class="form-control" name="python" placeholder="">
+                    C++<input type="input" class="form-control" name="c++" placeholder="">
+                    JavaScript: <input type="input" class="form-control" name="javascript" placeholder="">
+                    C#: <input type="input" class="form-control" name="c#" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">I would like to learn better</label>
+                    <select name="learnNext">
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="c++">C++</option>
+                    <option value="c#">C#</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <br>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
